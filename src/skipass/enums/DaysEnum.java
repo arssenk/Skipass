@@ -5,8 +5,9 @@ package skipass.enums;
  */
 public enum DaysEnum {
     ONE, TWO, FIVE;
-    public String toString(){
-        switch (this){
+
+    public String toString() {
+        switch (this) {
             case ONE:
                 return "1";
             case TWO:

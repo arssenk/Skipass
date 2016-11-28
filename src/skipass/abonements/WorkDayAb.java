@@ -11,7 +11,8 @@ public class WorkDayAb extends Abonement {
     public void setday(DaysEnum days) {
         this.setDays(days);
     }
-    public void setraises(RaisesEnum raises){
+
+    public void setraises(RaisesEnum raises) {
         this.setRaises(raises);
     }
 

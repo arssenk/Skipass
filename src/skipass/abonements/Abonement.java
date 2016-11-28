@@ -8,10 +8,11 @@ import skipass.enums.WeekendDaysEnum;
  * Created by arsen on 28.11.16.
  */
 public abstract class Abonement {
+    static int id;
     int days;
     int raises;
-    static int id;
     int identificator;
+
     public int getId() {
         return this.identificator;
     }
@@ -29,19 +30,22 @@ public abstract class Abonement {
         return days;
     }
 
+    public void setDays(WeekendDaysEnum days) {
+        this.identificator = id++;
+        this.days = Integer.parseInt(String.valueOf(days));
+    }
+
     public void setDays(DaysEnum days) {
         this.identificator = id++;
         this.days = Integer.parseInt(String.valueOf(days));
     }
-    public void setDays(WeekendDaysEnum days){
-        this.identificator = id++;
-        this.days = Integer.parseInt(String.valueOf(days));
-    }
-    public void shrinkRaises(){
+
+    public void shrinkRaises() {
         this.raises--;
     }
-    public String toString(){
-        return "User with id: " + getId() + ", letf raises: " + getRaises()+  " left days: " + getDays()+"\n";
+
+    public String toString() {
+        return "User with id: " + getId() + ", letf raises: " + getRaises() + " left days: " + getDays() + "\n";
     }
 
 }

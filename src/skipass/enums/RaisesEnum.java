@@ -5,14 +5,17 @@ package skipass.enums;
  */
 public enum RaisesEnum {
     TEN, TWONY, FIFTY, HUNGRED;
-    public String toString(){
-        switch (this){
+
+    public String toString() {
+        switch (this) {
             case TEN:
                 return "10";
             case TWONY:
                 return "20";
             case FIFTY:
                 return "50";
+            case HUNGRED:
+                return "100";
             default:
                 return "NO DAYS WERE CHOOSEN";
         }
