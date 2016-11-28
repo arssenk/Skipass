@@ -9,12 +9,10 @@ import skipass.enums.WeekendDaysEnum;
  */
 public class WeekendDayAb extends Abonement {
 
-    public void setRaises(RaisesEnum raises){
-        this.identificator = id++;
+    public void setraises(RaisesEnum raises){
         this.setRaises(raises);
     }
-    public void setDays(DaysEnum days){
-        this.identificator = id++;
+    public void setdays(DaysEnum days){
         this.setDays(days);
     }
 }

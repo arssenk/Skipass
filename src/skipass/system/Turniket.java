@@ -57,5 +57,14 @@ public class Turniket implements SystemControl{
         }
         return s;
     }
+
+    public static void main(String[] args) {
+        Turniket turniket = new Turniket();
+        turniket.produseAbonement(Abonements.WORKDAYDAYS, null, DaysEnum.ONE);
+        turniket.produseAbonement(Abonements.SEASON, null, null);
+        turniket.produseAbonement(Abonements.WEEKENDRAISES, RaisesEnum.FIFTY, null);
+        System.out.println(turniket.getUsers());
+
+    }
     }
 

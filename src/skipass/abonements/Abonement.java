@@ -21,6 +21,7 @@ public abstract class Abonement {
     }
 
     public void setRaises(RaisesEnum raises) {
+        this.identificator = id++;
         this.raises = Integer.parseInt(String.valueOf(raises));
     }
 
@@ -29,16 +30,18 @@ public abstract class Abonement {
     }
 
     public void setDays(DaysEnum days) {
+        this.identificator = id++;
         this.days = Integer.parseInt(String.valueOf(days));
     }
     public void setDays(WeekendDaysEnum days){
+        this.identificator = id++;
         this.days = Integer.parseInt(String.valueOf(days));
     }
     public void shrinkRaises(){
         this.raises--;
     }
     public String toString(){
-        return "User with id: " + getId() + ", letf raises: " + getRaises();
+        return "User with id: " + getId() + ", letf raises: " + getRaises()+  " left days: " + getDays()+"\n";
     }
 
 }
