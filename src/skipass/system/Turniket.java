@@ -6,6 +6,8 @@ import skipass.enums.Abonements;
 import skipass.enums.DaysEnum;
 import skipass.enums.RaisesEnum;
 
+import java.util.ArrayList;
+
 /**
  * Created by arsen on 28.11.16.
  */
@@ -17,8 +19,7 @@ public class Turniket implements SystemControl {
         turniket.produseAbonement(Abonements.WORKDAYDAYS, null, DaysEnum.ONE);
         turniket.produseAbonement(Abonements.SEASON, null, null);
         turniket.produseAbonement(Abonements.WEEKENDRAISES, RaisesEnum.FIFTY, null);
-        System.out.println(turniket.getUsers());
-
+        turniket.enter(turniket.getUsers().get(1));
     }
 
     void produseAbonement(Abonements ab, RaisesEnum raises, DaysEnum days) {
@@ -54,12 +55,13 @@ public class Turniket implements SystemControl {
         }
     }
 
-    public String getUsers() {
+    public ArrayList<Abonement> getUsers() {
         String s = "";
         for (Abonement a : abonements) {
             s += a;
         }
-        return s;
+        System.out.println(s);
+        return abonements;
     }
 }
 
